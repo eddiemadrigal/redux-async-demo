@@ -3,13 +3,13 @@ import { Container, Row, Col } from 'reactstrap';
 import '../index.css';
 
 
-export default function Users() {
+export default function Advice() {
     return(
         <div>
             <Container className="container">
                 <Row className="row">
                     <Col sm="12" md={{ size: 6, offset: 3 }}>
-                        <h1>Users</h1>
+                        <h1>Advice</h1>
                     </Col>
                 </Row>
             </Container>

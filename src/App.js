@@ -13,16 +13,12 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
   Container
 } from 'reactstrap';
+
 import Home from './components/Home';
 import About from './components/About';
-import Users from './components/Users';
+import Advice from './components/Advice';
 
 export default function App() {
 
@@ -42,7 +38,7 @@ export default function App() {
                 <Link className="nav-link" to="/">Home</Link>
               </NavItem>
               <NavItem>
-                <Link className="nav-link" to="/users">Users</Link>
+                <Link className="nav-link" to="/advice">Advice</Link>
               </NavItem>
               <NavItem>
                 <Link className="nav-link" to="/about">About</Link>
@@ -59,8 +55,8 @@ export default function App() {
           <Route path="/about">
             <About />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/advice">
+            <Advice />
           </Route>
           <Route path="/">
             <Home />
