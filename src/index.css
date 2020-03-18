@@ -1,4 +1,4 @@
-h1 {
+h1, h4, p {
   text-align: center;
 }
 
@@ -13,4 +13,8 @@ h1 {
 .link {
   margin-left: 10px;
   margin-top: 25px;
+}
+
+.loader {
+  text-align: center;
 }
