@@ -41,6 +41,7 @@ const Advice = props => {
                                 Get Some GREAT Advice
                         </Button>
                         
+                        <p className="github">GitHub URL: <a href="https://github.com/eddiemadrigal/redux-async-demo" target="_blank" rel="noopener noreferrer">https://github.com/eddiemadrigal/redux-async-demo</a></p>
 
                     </Col>
                 </Row>
