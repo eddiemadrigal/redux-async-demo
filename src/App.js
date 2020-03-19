@@ -30,7 +30,7 @@ export default function App() {
       <div>
         <Container>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">reactstrap</NavbarBrand>
+          <NavbarBrand href="https://eddiemadrigal.net" target="_blank">Eddie Madrigal</NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -44,7 +44,7 @@ export default function App() {
                 <Link className="nav-link" to="/about">About</Link>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+                <NavLink href="http://github.com/eddiemadrigal">Eddie's GitHub</NavLink>
               </NavItem>
             </Nav>
           </Collapse>
