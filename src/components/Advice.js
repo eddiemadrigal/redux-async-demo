@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import Loader from 'react-loader-spinner';
 import { fetchAdvice } from '../actions/adviceActions';
@@ -6,14 +6,18 @@ import { Container, Row, Col, Button } from 'reactstrap';
 import '../index.css';
 
 
-const Advice = props => {
+const Advice = ({fetchAdvice, isFetching, error, advice}) => {
 
     const getAdvice = e => {
         e.preventDefault();
-        props.fetchAdvice();
+        fetchAdvice();
     };
 
-    if (props.isFetching) {
+    useEffect(() => {
+        fetchAdvice()
+    }, [])
+
+    if (isFetching) {
         return <Loader type="Watch" color="#ccc" className="loader" />;
     }
 
@@ -27,9 +31,9 @@ const Advice = props => {
 
                         <p>Looking for great advice?  Click on the button and get you some o' that!!</p>
                         
-                        { props.error && <p>{ props.error }</p> }
-                        { props.advice ? (
-                            <h4>{ props.advice }</h4>
+                        { error && <p>{ error }</p> }
+                        { advice ? (
+                            <h4>{ advice }</h4>
                         ) : (
                             <p></p>
                         ) }
@@ -59,7 +63,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default connect(
-    mapStateToProps,
-    { fetchAdvice }
-)(Advice);
+export default connect(mapStateToProps, { fetchAdvice })(Advice);
